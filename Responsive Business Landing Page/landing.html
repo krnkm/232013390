@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Popup styling */
+    
         .popup-overlay {
             display: none;
             position: fixed;
@@ -104,7 +104,6 @@
         <p>&copy; 2025 Glamour Makeup Booking | Beauty Elevated</p>
     </footer>
 
-    <!-- Booking Popup -->
     <div class="popup-overlay" id="bookingPopup">
         <div class="popup-content">
             <h2>Book an Appointment</h2>
@@ -124,7 +123,6 @@
         </div>
     </div>
 
-    <!-- Confirmation Popup -->
     <div class="popup-overlay hidden" id="confirmationPopup">
         <div class="popup-content">
             <h2>Booking Submitted!</h2>
@@ -147,16 +145,12 @@
         }
 
         document.getElementById("bookingForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent form from refreshing the page
-
-            // Get user email
+            event.preventDefault(); 
             const userEmail = document.getElementById("email").value;
 
-            // Show confirmation message
             document.getElementById("bookingPopup").style.display = "none";
             document.getElementById("confirmationPopup").classList.remove("hidden");
 
-            // Simulated email sending
             console.log(`Email sent to: ${userEmail}`);
         });
     </script>
